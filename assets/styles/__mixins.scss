@@ -1,0 +1,112 @@
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: #{$screen-2xl-min}) {
+    @content;
+  }
+}
+
+@mixin bg-blur() {
+  backdrop-filter: blur(12.5px);
+}
+
+@mixin user-select-none {
+  user-select: none;
+}
+
+@mixin hide-scrollbar {
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin animate-quick($property, $duration: 0.3s) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin shadow-m() {
+  box-shadow: 0 0 15px rgb(25 25 25 / 5%);
+}
+
+@mixin border($top: false, $left: false, $right: false, $bottom: false, $all: false, $color) {
+  @if $top {
+    border-top: 1px solid $color;
+  }
+  @if $bottom {
+    border-bottom: 1px solid $color;
+  }
+  @if $left {
+    border-left: 1px solid $color;
+  }
+  @if $right {
+    border-right: 1px solid $color;
+  }
+  @if $all {
+    border: 1px solid $color;
+  }
+}
+
+@mixin gradient-text($gradient) {
+  background-clip: text;
+  text-fill-color: transparent;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin border-gradient($gradient) {
+  position: relative;
+  overflow: visible;
+  border: solid 1px transparent;
+  background-clip: padding-box;
+  /* !importanté */
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * 2px);
+    left: calc(-1 * 2px);
+    height: calc(100% + 2px * 2);
+    width: calc(100% + 2px * 2);
+    background: $gradient;
+    border-radius: 10px;
+    z-index: -1;
+    background-size: 300% 300%;
+  }
+}

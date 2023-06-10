@@ -1,0 +1,73 @@
+// Screen sizes
+$screen-sm-min: 640px;
+$screen-md-min: 768px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 1280px;
+$screen-2xl-min: 1536px;
+
+$color-grey: rgba(66, 66, 66, 1);
+$color-light-theme-border: rgba(25, 25, 25, 0.05);
+$color-light-theme-fill: rgba(25, 25, 25, 1);
+$color-dark-theme-border: rgba(255, 255, 255, 0.05);
+$color-dark-theme-fill: rgba(255, 255, 255, 1);
+$color-body-background: rgba(248, 248, 248, 1);
+$color-gradients-npm: linear-gradient(
+  to bottom,
+  rgba(186, 38, 87, 0.729) 0%,
+  rgba(215, 106, 43, 0.843) 100%
+);
+$color-gradients-github: linear-gradient(
+  to bottom,
+  rgba(139, 102, 209, 0.545) 0%,
+  rgba(177, 243, 184, 0.694) 100%
+);
+
+@mixin text-style-main() {
+  font-size: 1rem;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-h1() {
+  font-size: 3rem;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-h4() {
+  font-size: 1.2rem;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-hint() {
+  font-size: 0.8rem;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-copyright() {
+  font-size: 1rem;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: none;
+}
